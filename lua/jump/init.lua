@@ -98,6 +98,7 @@ function M.start()
       if jump_to then
         vim.cmd("normal! m'")
         api.nvim_win_set_cursor(win, jump_to)
+        vim.cmd('foldopen')
       end
 
       break
@@ -106,6 +107,7 @@ function M.start()
     elseif jump_to then
       vim.cmd("normal! m'")
       api.nvim_win_set_cursor(win, jump_to)
+      vim.cmd('foldopen')
       break
     else
       chars = chars .. char
